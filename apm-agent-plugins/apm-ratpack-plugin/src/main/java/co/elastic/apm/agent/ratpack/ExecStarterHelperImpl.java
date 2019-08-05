@@ -329,10 +329,9 @@ public class ExecStarterHelperImpl implements ExecStarterInstrumentation.ExecSta
 
         private void fillTransactionName(final Transaction transaction, final Context context) {
 
-            transaction.getName()
-                .append(context.getRequest().getMethod().getName())
-                .append(" /")
-                .append(context.getPathBinding().getDescription());
+            transaction.appendToName(context.getRequest().getMethod().getName());
+            transaction.appendToName(" /");
+            transaction.appendToName(context.getPathBinding().getDescription());
         }
     }
 

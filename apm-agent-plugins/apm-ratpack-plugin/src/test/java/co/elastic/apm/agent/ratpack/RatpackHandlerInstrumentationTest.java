@@ -314,7 +314,7 @@ class RatpackHandlerInstrumentationTest extends AbstractInstrumentationTest {
         final Transaction firstTransaction = reporter.getFirstTransaction(500);
 
         assertThat(firstTransaction).isNotNull();
-        assertThat(firstTransaction.getName().toString()).isEqualTo(transactionName);
+        assertThat(firstTransaction.getNameAsString()).isEqualTo(transactionName);
         assertThat(firstTransaction.getResult()).contains(String.valueOf(status));
         assertThat(firstTransaction.getContext().getResponse().isFinished()).isEqualTo(finished);
         assertThat(firstTransaction.getContext().getResponse().getStatusCode()).isEqualTo(status);

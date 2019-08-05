@@ -149,7 +149,7 @@ class RatpackHandlerConcurrentTest {
         final Transaction transaction = optionalTransaction.get();
 
         assertThat(transaction).isNotNull();
-        assertThat(transaction.getName().toString()).isEqualTo(transactionName);
+        assertThat(transaction.getNameAsString()).isEqualTo(transactionName);
         assertThat(transaction.getResult()).contains(String.valueOf(status));
         assertThat(transaction.getContext().getResponse().isFinished()).isTrue();
         assertThat(transaction.getContext().getResponse().getStatusCode()).isEqualTo(status);

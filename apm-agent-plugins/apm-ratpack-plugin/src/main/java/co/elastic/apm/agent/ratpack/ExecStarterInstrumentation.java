@@ -31,7 +31,6 @@ import net.bytebuddy.asm.Advice;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.matcher.ElementMatcher;
-import net.bytebuddy.matcher.ElementMatchers;
 import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement;
 import ratpack.exec.ExecStarter;
 import ratpack.exec.Execution;
@@ -75,7 +74,7 @@ public abstract class ExecStarterInstrumentation extends AbstractRatpackInstrume
     @Override
     public final ElementMatcher<? super TypeDescription> getTypeMatcher() {
         return not(isInterface())
-            .and(hasSuperType(ElementMatchers.named("ratpack.exec.ExecStarter")));
+            .and(hasSuperType(named("ratpack.exec.ExecStarter")));
     }
 
     @Override

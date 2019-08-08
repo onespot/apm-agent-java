@@ -6,3 +6,4 @@ co.elastic.apm.agent.ratpack.DefaultExecutionInstrumentation$RatpackDeactivateTr
 co.elastic.apm.agent.ratpack.RequestInstrumentation$RatpackReadBodyInstrumentation
 co.elastic.apm.agent.ratpack.RequestInstrumentation$RatpackReadStreamInstrumentation
 co.elastic.apm.agent.ratpack.ContextInstrumentation$RatpackCaptureExceptionInstrumentation
+co.elastic.apm.agent.ratpack.RatpackHttpClientInstrumentation
